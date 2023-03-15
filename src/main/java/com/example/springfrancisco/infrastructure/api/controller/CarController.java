@@ -1,0 +1,38 @@
+package com.example.springfrancisco.infrastructure.api.controller;
+
+import com.example.springfrancisco.application.CarEdit;
+import com.example.springfrancisco.application.CarGet;
+import com.example.springfrancisco.application.CarSave;
+import com.example.springfrancisco.domain.entities.Carro;
+import lombok.AllArgsConstructor;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+
+@RestController
+@AllArgsConstructor
+@RequestMapping(path="/car")
+public class CarController {
+
+  private final CarSave carSave;
+  private final CarGet carGet;
+
+  private final CarEdit carEdit;
+
+  @GetMapping
+  public ResponseEntity<Carro> getCar(@RequestParam String placa) {
+
+    return ResponseEntity.ok(carGet.getCar(placa));
+  }
+  @PostMapping
+  public ResponseEntity<Carro> addCar(@RequestBody Carro car) {
+    return new ResponseEntity<>(carSave.saveCar(car), HttpStatus.CREATED);
+
+  }
+  @PutMapping
+  public void editcar(@RequestBody Carro car) {
+      carEdit.editCar(car);
+  }
+
+
+}
