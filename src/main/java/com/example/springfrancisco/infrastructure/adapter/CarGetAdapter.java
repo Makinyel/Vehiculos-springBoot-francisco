@@ -20,13 +20,13 @@ public class CarGetAdapter implements CarGetService {
     @Override
     public Carro getCar(String placa) {
         Optional<CarroDto> carrodto = carRepository.findById(placa);
-        return carrodto.map(this::buildCarro).orElse(null);
+        return carrodto.map(carromapper::toCarroEntity).orElse(null);
     }
-
+/*
     private Carro buildCarro(CarroDto carro) {
         return new Carro(carro.getMarca(),carro.getPlaca(), carro.getModelo(), carro.getPrecio(), carro.getColor());
     }
-
+*/
 
 }
 

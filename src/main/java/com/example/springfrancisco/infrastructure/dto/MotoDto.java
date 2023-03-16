@@ -6,10 +6,9 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Data
 @Entity
-
 public class MotoDto extends VehiculoDto {
     private Integer cilindraje;
-    private boolean esElectrica;
+    private Boolean esElectrica;
     public MotoDto(String marca, String placa, String modelo, double precio, Integer cilindraje, boolean esElectrica) {
         super(marca, placa, modelo, precio);
         this.cilindraje = cilindraje;

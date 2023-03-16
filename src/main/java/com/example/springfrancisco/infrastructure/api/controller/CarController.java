@@ -32,10 +32,8 @@ public class CarController {
   }
   @PutMapping
   public void editcar(@RequestBody Carro car) {
-      carEdit.editCar(car);
+    carEdit.editCar(car);
   }
-
-
   @DeleteMapping
   public void deleteCar(@RequestParam String placa) {
     carDelete.deleteCar(placa);
