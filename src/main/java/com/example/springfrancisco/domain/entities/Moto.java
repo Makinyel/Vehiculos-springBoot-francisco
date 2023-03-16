@@ -11,7 +11,7 @@ import lombok.Setter;
 @Setter
 @Getter
 
-public class Moto extends Vehiculo{
+public class Moto extends Vehiculo {
     private Integer cilindraje;
     private Boolean esElectrica;
 

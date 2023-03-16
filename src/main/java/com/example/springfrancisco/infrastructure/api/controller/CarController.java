@@ -12,30 +12,33 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @AllArgsConstructor
-@RequestMapping(path="/car")
+@RequestMapping(path = "/car")
 public class CarController {
 
-  private final CarSave carSave;
-  private final CarGet carGet;
-  private final CarEdit carEdit;
-  private final CarDelete carDelete;
+    private final CarSave carSave;
+    private final CarGet carGet;
+    private final CarEdit carEdit;
+    private final CarDelete carDelete;
 
-  @GetMapping
-  public ResponseEntity<Carro> getCar(@RequestParam String placa) {
+    @GetMapping
+    public ResponseEntity<Carro> getCar(@RequestParam String placa) {
 
-    return ResponseEntity.ok(carGet.getCar(placa));
-  }
-  @PostMapping
-  public ResponseEntity<Carro> addCar(@RequestBody Carro car) {
-    return new ResponseEntity<>(carSave.saveCar(car), HttpStatus.CREATED);
+        return ResponseEntity.ok(carGet.getCar(placa));
+    }
 
-  }
-  @PutMapping
-  public void editcar(@RequestBody Carro car) {
-    carEdit.editCar(car);
-  }
-  @DeleteMapping
-  public void deleteCar(@RequestParam String placa) {
-    carDelete.deleteCar(placa);
-  }
+    @PostMapping
+    public ResponseEntity<Carro> addCar(@RequestBody Carro car) {
+        return new ResponseEntity<>(carSave.saveCar(car), HttpStatus.CREATED);
+
+    }
+
+    @PutMapping
+    public void editcar(@RequestBody Carro car) {
+        carEdit.editCar(car);
+    }
+
+    @DeleteMapping
+    public void deleteCar(@RequestParam String placa) {
+        carDelete.deleteCar(placa);
+    }
 }

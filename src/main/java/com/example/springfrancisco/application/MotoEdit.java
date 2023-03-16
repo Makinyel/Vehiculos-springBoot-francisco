@@ -1,6 +1,6 @@
 package com.example.springfrancisco.application;
+
 import com.example.springfrancisco.domain.entities.Moto;
-import com.example.springfrancisco.domain.service.CarGetService;
 import com.example.springfrancisco.domain.service.MotoEditService;
 import com.example.springfrancisco.domain.service.MotoGetService;
 import lombok.AllArgsConstructor;
@@ -17,9 +17,10 @@ import java.util.Objects;
 public class MotoEdit {
     private MotoEditService motoEditService;
     private final MotoGetService motoGetService;
+
     public void editMoto(Moto moto) {
-        Moto carro1 = motoGetService.getMoto(moto.getPlaca());
-        if (Objects.isNull(carro1)) {
+        Moto moto1 = motoGetService.getMoto(moto.getPlaca());
+        if (Objects.isNull(moto1)) {
             log.info("LA MOTO CON PLACA {} NO ESTA REGISTRADO", moto.getPlaca());
         }
         motoEditService.editMoto(moto);

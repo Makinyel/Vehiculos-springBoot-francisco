@@ -12,10 +12,10 @@ import org.springframework.stereotype.Service;
 @Service
 public class MotoSaveAdapter implements MotoSaveService {
     private final MotoRepository motoRepository;
-    private  final MotoMapper   motoMapper;
+    private final MotoMapper motoMapper;
 
     @Override
     public Moto saveMoto(Moto moto) {
-        return motoMapper.toMoto((MotoDto)this.motoRepository.save(this.motoMapper.toMotoDto(moto)));
+        return motoMapper.toMoto((MotoDto) this.motoRepository.save(this.motoMapper.toMotoDto(moto)));
     }
 }

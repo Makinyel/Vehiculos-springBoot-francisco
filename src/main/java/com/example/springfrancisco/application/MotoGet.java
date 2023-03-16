@@ -13,7 +13,7 @@ public class MotoGet {
 
     private final MotoGetService motoGetService;
 
-    public Moto getMoto(String placa){
+    public Moto getMoto(String placa) {
         return motoGetService.getMoto(placa);
     }
 }

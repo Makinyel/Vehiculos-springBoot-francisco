@@ -6,16 +6,18 @@ import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.MappingConstants;
 import org.mapstruct.Mappings;
+
 @Mapper(componentModel = MappingConstants.ComponentModel.SPRING)
 public interface CarroMapper {
     @Mappings({
-            @Mapping(target = "marca",source = "marca"),
-            @Mapping(target = "placa",source = "placa"),
-            @Mapping(target = "modelo",source = "modelo"),
-            @Mapping(target = "precio",source = "precio"),
-            @Mapping(target = "color",source = "color")
+            @Mapping(target = "marca", source = "marca"),
+            @Mapping(target = "placa", source = "placa"),
+            @Mapping(target = "modelo", source = "modelo"),
+            @Mapping(target = "precio", source = "precio"),
+            @Mapping(target = "color", source = "color")
     })
     CarroDto toCarroDto(Carro carro);
+
     Carro toCarroEntity(CarroDto carroDto);
 
 

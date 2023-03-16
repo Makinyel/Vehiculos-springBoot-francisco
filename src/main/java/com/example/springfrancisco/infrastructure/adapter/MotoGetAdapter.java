@@ -15,6 +15,7 @@ import java.util.Optional;
 public class MotoGetAdapter implements MotoGetService {
     private final MotoRepository motoRepository;
     private final MotoMapper motoMapper;
+
     @Override
     public Moto getMoto(String placa) {
         Optional<MotoDto> motoDto = motoRepository.findById(placa);

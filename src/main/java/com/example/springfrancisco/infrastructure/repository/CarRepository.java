@@ -8,7 +8,7 @@ import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface CarRepository  extends JpaRepository<CarroDto, String> {
+public interface CarRepository extends JpaRepository<CarroDto, String> {
 
     @Query(nativeQuery = true, value = "update carro_dto set marca = :marca, modelo = :modelo, precio = :precio, color = :color where placa = :placa")
     @Modifying
