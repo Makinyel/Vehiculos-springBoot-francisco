@@ -2,7 +2,7 @@ package com.example.springfrancisco.domain.entities;
 
 public interface Frenar
 {
-    default public void frenar(){
+    public default void frenar(){
         System.out.println("Frenando el Vehículo.");
     }
 

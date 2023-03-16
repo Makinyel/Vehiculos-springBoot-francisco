@@ -1,5 +1,6 @@
 package com.example.springfrancisco.infrastructure.api.controller;
 
+import com.example.springfrancisco.application.CarDelete;
 import com.example.springfrancisco.application.CarEdit;
 import com.example.springfrancisco.application.CarGet;
 import com.example.springfrancisco.application.CarSave;
@@ -16,8 +17,8 @@ public class CarController {
 
   private final CarSave carSave;
   private final CarGet carGet;
-
   private final CarEdit carEdit;
+  private final CarDelete carDelete;
 
   @GetMapping
   public ResponseEntity<Carro> getCar(@RequestParam String placa) {
@@ -35,4 +36,8 @@ public class CarController {
   }
 
 
+  @DeleteMapping
+  public void deleteCar(@RequestParam String placa) {
+    carDelete.deleteCar(placa);
+  }
 }

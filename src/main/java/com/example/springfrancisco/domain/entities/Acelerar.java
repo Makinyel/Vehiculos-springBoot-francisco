@@ -1,7 +1,7 @@
 package com.example.springfrancisco.domain.entities;
 
 public interface Acelerar {
-    default public void acelerarVehiculo(){
+    public default  void acelerarVehiculo(){
         System.out.println("Acelenrando el vehículo.");
     }
 }

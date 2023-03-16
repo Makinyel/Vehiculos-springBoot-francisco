@@ -1,14 +1,19 @@
 package com.example.springfrancisco.domain.entities;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.ToString;
+import lombok.*;
 
-@AllArgsConstructor
-@Getter
-@ToString
-public abstract class Vehiculo implements Acelerar,Frenar, IniciarMarcha,Comparable<Vehiculo>{
-    private final String marca;
-    private final String placa;
-    private final String modelo;
-    private final double precio;
+@NoArgsConstructor
+@Data
+
+public  class Vehiculo implements Acelerar,Frenar, IniciarMarcha{
+    private  String marca;
+    private  String placa;
+    private  String modelo;
+    private  double precio;
+
+    public Vehiculo(String marca, String placa, String modelo, double precio) {
+        this.marca = marca;
+        this.placa = placa;
+        this.modelo = modelo;
+        this.precio = precio;
+    }
 }

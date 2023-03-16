@@ -10,7 +10,6 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-@Builder
 @MappedSuperclass
 public class VehiculoDto {
 
