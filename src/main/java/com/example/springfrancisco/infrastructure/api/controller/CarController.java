@@ -1,9 +1,9 @@
 package com.example.springfrancisco.infrastructure.api.controller;
 
-import com.example.springfrancisco.application.CarDelete;
-import com.example.springfrancisco.application.CarEdit;
-import com.example.springfrancisco.application.CarGet;
-import com.example.springfrancisco.application.CarSave;
+import com.example.springfrancisco.application.Car.CarDelete;
+import com.example.springfrancisco.application.Car.CarEdit;
+import com.example.springfrancisco.application.Car.CarGet;
+import com.example.springfrancisco.application.Car.CarSave;
 import com.example.springfrancisco.domain.entities.Carro;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;

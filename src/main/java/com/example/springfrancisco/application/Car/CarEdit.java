@@ -1,8 +1,8 @@
-package com.example.springfrancisco.application;
+package com.example.springfrancisco.application.Car;
 
 import com.example.springfrancisco.domain.entities.Carro;
-import com.example.springfrancisco.domain.service.CarEditService;
-import com.example.springfrancisco.domain.service.CarGetService;
+import com.example.springfrancisco.domain.service.carro.CarEditService;
+import com.example.springfrancisco.domain.service.carro.CarGetService;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;

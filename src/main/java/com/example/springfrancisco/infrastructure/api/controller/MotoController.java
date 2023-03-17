@@ -1,10 +1,10 @@
 package com.example.springfrancisco.infrastructure.api.controller;
 
 
-import com.example.springfrancisco.application.MotoDelete;
-import com.example.springfrancisco.application.MotoEdit;
-import com.example.springfrancisco.application.MotoGet;
-import com.example.springfrancisco.application.MotoSave;
+import com.example.springfrancisco.application.Moto.MotoDelete;
+import com.example.springfrancisco.application.Moto.MotoEdit;
+import com.example.springfrancisco.application.Moto.MotoGet;
+import com.example.springfrancisco.application.Moto.MotoSave;
 import com.example.springfrancisco.domain.entities.Moto;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -13,7 +13,8 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @AllArgsConstructor
-@RequestMapping(path = "/moto")
+
+
 
 public class MotoController {
     private final MotoSave motoSave;

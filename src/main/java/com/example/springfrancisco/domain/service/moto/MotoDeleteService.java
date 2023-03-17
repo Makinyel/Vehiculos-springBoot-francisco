@@ -1,4 +1,4 @@
-package com.example.springfrancisco.domain.service;
+package com.example.springfrancisco.domain.service.moto;
 
 public interface MotoDeleteService {
     void deleteMoto(String placa);
