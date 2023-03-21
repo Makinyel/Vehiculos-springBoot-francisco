@@ -22,11 +22,10 @@ public class CarController {
     private final CarEdit carEdit;
     private final CarDelete carDelete;
 
-    @GetMapping
+    @GetMapping()
     public ResponseEntity<Carro> getCar(@RequestParam String placa) {
-
-        return ResponseEntity.ok(carGet.getCar(placa));
-    }
+            return ResponseEntity.ok(carGet.getCar(placa));
+        }
 
     @PostMapping
     public ResponseEntity<Carro> addCar(@RequestBody Carro car,@RequestHeader("id") String id) {
