@@ -3,7 +3,6 @@ spring:
     name: vehiculos
   profiles:
     active: local
-
 ---
 spring:
   profile: local

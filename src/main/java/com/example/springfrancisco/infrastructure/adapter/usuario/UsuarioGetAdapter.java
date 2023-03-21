@@ -3,7 +3,6 @@ package com.example.springfrancisco.infrastructure.adapter.usuario;
 import com.example.springfrancisco.domain.entities.Usuario;
 import com.example.springfrancisco.domain.service.usuario.UsuarioResponseGetService;
 import com.example.springfrancisco.infrastructure.client.UsuarioClient;
-import com.example.springfrancisco.infrastructure.client.UsuarioResponse;
 import com.example.springfrancisco.infrastructure.mapper.UsuarioMapper;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;

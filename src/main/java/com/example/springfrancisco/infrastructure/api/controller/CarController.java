@@ -6,12 +6,14 @@ import com.example.springfrancisco.application.Car.CarGet;
 import com.example.springfrancisco.application.Car.CarSave;
 import com.example.springfrancisco.domain.entities.Carro;
 import lombok.AllArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-@RestController
 @AllArgsConstructor
+@RestController
+@Slf4j
 @RequestMapping(path = "/car")
 public class CarController {
 
@@ -27,8 +29,10 @@ public class CarController {
     }
 
     @PostMapping
-    public ResponseEntity<Carro> addCar(@RequestBody Carro car) {
-        return new ResponseEntity<>(carSave.saveCar(car), HttpStatus.CREATED);
+    public ResponseEntity<Carro> addCar(@RequestBody Carro car,@RequestHeader("id") String id) {
+        log.info("ID---"+id);
+        log.info(car.getPlaca());
+        return new ResponseEntity<>(carSave.saveCar(car,id), HttpStatus.CREATED);
 
     }
 
