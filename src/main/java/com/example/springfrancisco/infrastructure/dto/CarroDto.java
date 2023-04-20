@@ -1,6 +1,7 @@
 package com.example.springfrancisco.infrastructure.dto;
 
 import jakarta.persistence.Entity;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -8,6 +9,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Data
 @Entity
+
 public class CarroDto extends VehiculoDto {
     private String color;
 

@@ -1,10 +1,12 @@
 package com.example.springfrancisco.domain.entities;
 
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @NoArgsConstructor
 @Data
+@Builder
 public class Usuario {
 
     private String nombre;

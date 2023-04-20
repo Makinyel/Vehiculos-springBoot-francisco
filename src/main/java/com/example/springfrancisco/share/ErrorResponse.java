@@ -1,4 +1,4 @@
-package com.example.springfrancisco.infrastructure.share;
+package com.example.springfrancisco.share;
 
 import lombok.Builder;
 import lombok.Data;

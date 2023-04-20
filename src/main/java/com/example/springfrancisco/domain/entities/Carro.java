@@ -1,15 +1,12 @@
 package com.example.springfrancisco.domain.entities;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 
 @AllArgsConstructor
 @NoArgsConstructor
-@Setter
-@Getter
+@Data
+@Builder
 
 public class Carro extends Vehiculo {
     private String color;

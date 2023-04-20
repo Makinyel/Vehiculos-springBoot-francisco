@@ -21,10 +21,10 @@ public class CarController {
     private final CarGet carGet;
     private final CarEdit carEdit;
     private final CarDelete carDelete;
-
-    @GetMapping()
+    @GetMapping("/car/obtener")
     public ResponseEntity<Carro> getCar(@RequestParam String placa) {
-            return ResponseEntity.ok(carGet.getCar(placa));
+
+        return ResponseEntity.ok(carGet.getCar(placa));
         }
 
     @PostMapping

@@ -13,9 +13,9 @@ import org.springframework.stereotype.Service;
 @Service
 @Slf4j
 
-public class CarGet {
+public class
+CarGet {
     private final CarGetService cargetservice;
-    private final UsuarioResponseGetService usuarioResponseGetService;
     public Carro getCar(String placa) {
         return cargetservice.getCar(placa);
     }
